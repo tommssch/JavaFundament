@@ -1,5 +1,5 @@
 package Task1;
-
+//Simple class Pen with price,name,Color of ink.
 public class Pen {
 
     private  String name;
