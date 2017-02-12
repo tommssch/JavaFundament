@@ -1,3 +1,3 @@
 package Task1;
 
-enum color{BLACK,BLUE,RED,GREEN}
+ public enum color{BLACK,BLUE,RED,GREEN}

@@ -33,6 +33,7 @@ public class Pen {
         return this.name;
     }
 
+
     public int getPrice()
     {
         return this.price;
@@ -44,16 +45,36 @@ public class Pen {
     }
 
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
 
-    public boolean equals(Pen o)
+        Pen pen = (Pen) o;
+
+        if (price != pen.price) return false;
+        if (name != null ? !name.equals(pen.name) : pen.name != null) return false;
+        return clr == pen.clr;
+    }
+
+    public boolean equalss(Object o)
     {
-        if(this.name.equals(o.getName()))
-            if(this.price==o.getPrice())
-                if(this.clr==o.getColor())
+        if (this==o)
+            return true;
+        if(o ==null|| getClass() != o.getClass())
+            return false;
+
+        Pen p=(Pen)o;
+
+        if (name==null?p.getName()==null:name.equals(p.getName()))
+            if (this.price == p.getPrice())
+                if (this.clr == p.getColor())
                     return true;
 
         return false;
     }
+
+
 
     @Override
     public int hashCode() {
@@ -63,6 +84,6 @@ public class Pen {
         return result;
     }
     public String toString(){
-        return "name:"+name+" price:"+price+" color:"+clr;
+        return "Class:"+this.getClass().toString()+" name:"+name+" price:"+price+" color:"+clr;
     }
 }
