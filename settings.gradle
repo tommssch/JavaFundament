@@ -17,4 +17,5 @@ include 'services:webservice'
 
 rootProject.name = 'JavaFundament'
 include 'oop',
-        'strings'
+        'strings',
+        'io'
